@@ -1,0 +1,16 @@
+.root{
+-fx-background-image:url('../image/PNG/menu_page_background.png');
+-fx-background-size:cover;
+}
+#play_sub_scene{
+-fx-background-image:url('../image/PNG/green_subscene.png');
+-fx-background-size:cover;
+}
+#records_sub_scene{
+-fx-background-image:url('../image/PNG/green_subscene.png');
+-fx-background-size:cover;
+}
+#game_over_page{
+-fx-background-image:url('../image/PNG/game_over.png');
+-fx-background-size:cover;
+}

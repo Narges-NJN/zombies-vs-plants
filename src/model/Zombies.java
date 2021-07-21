@@ -17,7 +17,7 @@ public abstract class Zombies extends GameComponents{
     protected int pace = -1;
     protected Timeline zombieAnimation;
     protected boolean reachedPlant = false;
-    protected boolean isEating = false;
+    //protected boolean isEating = false;
 
     public Zombies(String imagePath, int x, int y, int width, int height, int powerOfAttack, int energy, int lane, GridPane lawn_grid) {
         super(imagePath, x, y, width, height);

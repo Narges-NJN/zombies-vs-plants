@@ -67,6 +67,7 @@ public class FastZombie extends Zombies {
         this.pace = 0;
         this.image.setVisible(false);
         this.image.setDisable(true);
+        PlayGroundController.allZombies.remove(this);
         PlayGroundController.allPlants.remove(p);
         p.image.setVisible(false);
         p.image.setDisable(true);

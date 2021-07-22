@@ -1,8 +1,13 @@
 package model;
 
 import controller.PlayGroundController;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 
 import java.util.Iterator;
 
@@ -19,9 +24,46 @@ public class FastZombie extends Zombies {
         z.moveZombie(20);
     }
 
+    private void removeNearZombies() {
+        synchronized (PlayGroundController.allZombies) {
+            Iterator<Zombies> j = PlayGroundController.allZombies.iterator();
+            while(j.hasNext()) {
+                Zombies x = j.next();
+                if(x.getX()<=(getX()+250) && x.getX()>=(getX()-150))
+                {
+                    if(x.getY()<=(getY()+250) && x.getY()>=(getY()-150)) {
+                        PlayGroundController.allZombies.remove(j);
+                        x.image.setVisible(false);
+                        x.image.setDisable(true);
+                        x.pace = 0;
+                        x.endAnimation(x.zombieAnimation);
+                    }
+                }
+            }
+        }
+    }
+    private void removeNearPlants() {
+        synchronized (PlayGroundController.allPlants) {
+            Iterator<Plants> j = PlayGroundController.allPlants.iterator();
+            while(j.hasNext()) {
+                Plants p = j.next();
+                if(p.getX()<=(getX()+250) && p.getX()>=(getX()-150))
+                {
+                    if(p.getY()<=(getY()+250) && p.getY()>=(getY()-150)) {
+                        PlayGroundController.allPlants.remove(j);
+                        p.image.setVisible(false);
+                        p.image.setDisable(true);
+                        p.stopAnimations();
+                    }
+                }
+            }
+        }
+    }
 
     @Override
     protected void customizedZombieAttack(Plants p) {
+        removeNearPlants();
+        removeNearZombies();
         this.pace = 0;
         this.image.setVisible(false);
         this.image.setDisable(true);
@@ -29,43 +71,6 @@ public class FastZombie extends Zombies {
         p.image.setVisible(false);
         p.image.setDisable(true);
         p.stopAnimations();
-        synchronized (PlayGroundController.allPlants) {
-            Iterator<Plants> i = PlayGroundController.allPlants.iterator();
-            while (i.hasNext()) {
-                Plants n = i.next();
-                if ( (n.row == p.row && n.col== p.col+1) ||
-                        (n.row == p.row && n.col== p.col-1) ||
-                        (n.row == p.row+1 && n.col== p.col) ||
-                        (n.row == p.row-1 && n.col== p.col) ||
-                        (n.row == p.row+1 && n.col== p.col+1) ||
-                        (n.row == p.row-1 && n.col== p.col+1) ||
-                        (n.row == p.row -1 && n.col== p.col-1) ||
-                        (n.row == p.row +1 && n.col== p.col-1)) {
-                    PlayGroundController.allPlants.remove(n);
-                    n.image.setVisible(false);
-                    n.image.setDisable(true);
-                    n.stopAnimations();
-                }
-            }
-        }
-        synchronized (PlayGroundController.allZombies) {
-            Iterator<Zombies> a = PlayGroundController.allZombies.iterator();
-            while (a.hasNext()) {
-                Zombies z = a.next();
-                if ( (z.getLine() == p.row && z.getX()== p.getX()+200) ||
-                        (z.getLine() == p.row && z.getX()== p.getX()-200) ||
-                        (z.getLine() == p.row+1 && z.getX()== p.getX()) ||
-                        (z.getLine() == p.row-1 && z.getX()== p.getX()) ||
-                        (z.getLine() == p.row+1 && z.getX()== p.getX()+200) ||
-                        (z.getLine() == p.row-1 && z.getX()== p.getX()+200) ||
-                        (z.getLine() == p.row -1 && z.getX()== p.getX()-200) ||
-                        (z.getLine() == p.row +1 && z.getX()== p.getX()-200)) {
-                    PlayGroundController.allZombies.remove(z);
-                    z.image.setVisible(false);
-                    z.image.setDisable(true);
-                }
-            }
-        }
         super.endAnimation(zombieAnimation);
-        }
+    }
 }

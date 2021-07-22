@@ -6,8 +6,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
 public class Line {
-    private static SunFlower SunFlower;
-
     public static void removeLine(GridPane gridPane, int rowIndex){
         ImageView image = new ImageView();
         Image img=new Image("/image/PNG/lawn_lane.png",(double) 1000, (double) 130,false,false);

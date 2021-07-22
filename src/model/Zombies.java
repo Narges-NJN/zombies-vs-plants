@@ -121,17 +121,12 @@ public abstract class Zombies extends GameComponents{
         if (image.getX() <= 300){
             PlayGroundController.pauseAnimations();
             Line.removeLine(lawn_grid, getLine());
-            System.out.println(1);
             removeFromAvailableLines();
-            System.out.println(2);
             this.image.setVisible(false);
             PlayGroundController.allZombies.remove(this);
             super.endAnimation(zombieAnimation);
-            System.out.println(3);
             removeInLineZombies();
-            System.out.println(4);
             removeInLinePlants();
-            System.out.println(5);
             PlayGroundController.startAnimations();
         }
 

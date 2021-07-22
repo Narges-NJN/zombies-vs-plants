@@ -54,7 +54,8 @@ public class Bomb extends Plants{
                         if(z.getLane() == lane){
                             if ( Math.abs(z.getX() - x) <= 50) {
                                 fire.setVisible(true);
-                                PlayGroundController.allPlants.remove(this);
+                                removeBomb();
+                                //PlayGroundController.allPlants.remove(this);
                                 synchronized (PlayGroundController.allZombies) {
                                     Iterator<Zombies> j = PlayGroundController.allZombies.iterator();
                                     while(j.hasNext()) {
@@ -79,7 +80,9 @@ public class Bomb extends Plants{
                                         e.printStackTrace();
                                     }
                                     image.setVisible(false);
+                                    image.setDisable(false);
                                     fire.setVisible(false);
+                                    fire.setDisable(false);
                                     stopAnimations();
                                 });
                                 t.start();
@@ -92,6 +95,10 @@ public class Bomb extends Plants{
         bombTimeLine.setCycleCount(Timeline.INDEFINITE);
         bombTimeLine.play();
         PlayGroundController.animationTimelines.add(bombTimeLine);
+    }
+
+    private void removeBomb() {
+        PlayGroundController.allPlants.remove(this);
     }
 
     @Override

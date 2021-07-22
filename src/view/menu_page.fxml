@@ -2,6 +2,7 @@
 
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -61,28 +62,62 @@
       </Group>
       <AnchorPane fx:id="play_sub_scene" layoutX="1200.0" layoutY="90.0" prefHeight="513.0" prefWidth="688.0" stylesheets="@../css/backgrounds.css">
          <children>
-            <Button fx:id="play_button" layoutX="280.0" layoutY="400.0" mnemonicParsing="false" onAction="#playOnClick" prefHeight="59.0" prefWidth="157.0" style="-fx-background-color: #1e590d;" text="Play" textFill="WHITE">
+            <Button fx:id="play_button" layoutX="266.0" layoutY="400.0" mnemonicParsing="false" onAction="#playOnClick" prefHeight="59.0" prefWidth="157.0" style="-fx-background-color: #1e590d;" text="Play" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <RadioButton fx:id="level1" layoutX="300.0" layoutY="150.0" onAction="#level1" text="level 1" textFill="#1e590d">
+            <RadioButton fx:id="level1" layoutX="73.0" layoutY="288.0" onAction="#level1" text="simple" textFill="#1e590d">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Ubuntu Mono" size="24.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="level2" layoutX="300.0" layoutY="200.0" onAction="#level2" text="level 2" textFill="#1e590d">
+            <RadioButton fx:id="level2" layoutX="306.0" layoutY="288.0" onAction="#level2" text="mid" textFill="#1e590d">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Ubuntu Mono" size="24.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="level3" layoutX="300.0" layoutY="250.0" onAction="#level3" text="level 3" textFill="#1e590d">
+            <RadioButton fx:id="level3" layoutX="511.0" layoutY="288.0" onAction="#level3" text="hard" textFill="#1e590d">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Ubuntu Mono" size="24.0" />
                </font>
             </RadioButton>
+            <ImageView fitHeight="105.0" fitWidth="157.0" layoutX="52.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/PNG/level1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="157.0" layoutX="266.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/PNG/level2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="157.0" layoutX="477.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/PNG/level3.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="102.0" layoutY="206.0" text="5 * 9" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Mono Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="317.0" layoutY="205.0" text="5 * 7" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Mono Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="528.0" layoutY="205.0" text="5 * 5" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Mono Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="205.0" layoutY="73.0" text="Choose a Level" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Mono" size="40.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
-      <AnchorPane fx:id="records_sub_scene" layoutX="1200.0" layoutY="90.0" prefHeight="513.0" prefWidth="688.0" stylesheets="@../css/backgrounds.css" />
       <Group fx:id="login_sub_scene" layoutX="428.0" layoutY="95.0">
          <children>
             <ImageView fitHeight="507.0" fitWidth="696.0" pickOnBounds="true" preserveRatio="true">
@@ -112,5 +147,6 @@
             </Text>
          </children>
       </Group>
+      <AnchorPane fx:id="records_sub_scene" layoutX="1201.0" layoutY="89.0" prefHeight="513.0" prefWidth="688.0" stylesheets="@../css/backgrounds.css" />
    </children>
 </AnchorPane>

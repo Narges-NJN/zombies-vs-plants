@@ -21,12 +21,10 @@ public class Pea extends GameComponents{
     public void movePea(){
         if(x<=1198)
             setX(getX()+1);
-
         if(this.plantLocation > getX())
             image.setVisible(false);
         else
             image.setVisible(true);
-
         checkZombieCollision();
     }
 

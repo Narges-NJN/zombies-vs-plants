@@ -37,6 +37,9 @@ public class PlayGroundController implements Initializable {
     public static int score = 0;
     private static int sunCount = 25;
     private static Label static_sun_count;
+    public ImageView lawn_image;
+    public ImageView day_mode_icon;
+    public ImageView night_mode_icon;
     private ImageView pause_icon;
     public Line boundLine;
     @FXML
@@ -60,7 +63,7 @@ public class PlayGroundController implements Initializable {
     private int selectedCard = -1;
     private int selectedCardCost = -1;
     public static int level = -1;
-
+    private boolean nightMode = false;
     public static ArrayList<Timeline> animationTimelines;
     public static List allZombies;
     public static List allPlants;
@@ -91,6 +94,7 @@ public class PlayGroundController implements Initializable {
         pause_icon = new ImageView();
         Image img = new Image("/image/PNG/pause_icon.png",(double) 30,(double) 30,false,false);
         pause_icon.setImage(img);
+        night_mode_icon.setVisible(false);
     }
 
     private void controlZombies(Random rand){
@@ -317,6 +321,23 @@ public class PlayGroundController implements Initializable {
         {
             animationTimelines.get(i).stop();
         }
+    }
+
+    public void modeButtonOnClick(MouseEvent mouseEvent) {
+       if (!nightMode){
+           nightMode = true;
+           night_mode_icon.setVisible(true);
+           day_mode_icon.setVisible(false);
+           Image img = new Image("/image/PNG/lawn_night.png",(double) 1200,(double) 700,false,false);
+           lawn_image.setImage(img);
+
+       }else {
+           nightMode = false;
+           night_mode_icon.setVisible(false);
+           day_mode_icon.setVisible(true);
+           Image img = new Image("/image/PNG/lawn.png",(double) 1200,(double) 700,false,false);
+           lawn_image.setImage(img);
+       }
     }
 }
 

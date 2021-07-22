@@ -5,7 +5,6 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import util.FileHandler;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -26,6 +25,9 @@ public class GameOverController implements Initializable {
     }
 
     public void mainMenuOnClick(MouseEvent mouseEvent) {
+        //System.exit(0);
+        //Main.main(null);
+        
     }
 
     public void exitOnClick(MouseEvent mouseEvent) {

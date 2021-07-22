@@ -10,7 +10,6 @@ public abstract class Plants extends GameComponents {
     protected int price;
     public int col;
     public int row;
-    protected int powerOfAttack;
     protected int energy;
 
     public Plants(String path, int x, int y, int price, int energy, int width,int height,int col,int row) {

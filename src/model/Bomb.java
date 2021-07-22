@@ -31,9 +31,7 @@ public class Bomb extends Plants{
 
     public void showFire() {
         fire = new ImageView();
-        System.out.println("1");
         Image img = new Image("/image/GIF/fire.gif", 180, 160,false,false);
-        System.out.println("2");
         fire.setImage(img);
         fire.setX(x-30);
         fire.setY(y-20);
@@ -51,7 +49,7 @@ public class Bomb extends Plants{
                     Iterator<Zombies> i = PlayGroundController.allZombies.iterator();
                     while(i.hasNext()) {
                         Zombies z = i.next();
-                        if(z.getLane() == lane){
+                        if(z.getLine() == lane){
                             if ( Math.abs(z.getX() - x) <= 50) {
                                 fire.setVisible(true);
                                 removeBomb();

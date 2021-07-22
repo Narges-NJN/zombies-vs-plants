@@ -43,7 +43,7 @@ public class Pea extends GameComponents{
                 Iterator<Zombies> i = PlayGroundController.allZombies.iterator();
                 while (i.hasNext()) {
                     Zombies z = i.next();
-                    if(z.getLane() == lane && !flag)
+                    if(z.getLine() == lane && !flag)
                     {
                         if(Math.abs(z.getX()-getX())<=3 && !flag)
                         {

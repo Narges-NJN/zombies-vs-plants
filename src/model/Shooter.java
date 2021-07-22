@@ -32,7 +32,7 @@ public abstract class Shooter extends Plants {
                     Iterator<Zombies> i = PlayGroundController.allZombies.iterator();
                     while (i.hasNext()) {
                         Zombies z = i.next();
-                        if (z.getX() < PlayGroundController.boundXCoordinate-95 && z.getLane() == getShooterLane() && getX() <= z.getX()) {
+                        if (z.getX() < PlayGroundController.boundXCoordinate-95 && z.getLine() == getShooterLane() && getX() <= z.getX()) {
                             customizedShoot(pane);
                             checkEnergy();
                         }

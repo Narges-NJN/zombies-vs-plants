@@ -52,14 +52,14 @@ public class FastZombie extends Zombies {
             Iterator<Zombies> a = PlayGroundController.allZombies.iterator();
             while (a.hasNext()) {
                 Zombies z = a.next();
-                if ( (z.getLane() == p.row && z.getX()== p.getX()+200) ||
-                        (z.getLane() == p.row && z.getX()== p.getX()-200) ||
-                        (z.getLane() == p.row+1 && z.getX()== p.getX()) ||
-                        (z.getLane() == p.row-1 && z.getX()== p.getX()) ||
-                        (z.getLane() == p.row+1 && z.getX()== p.getX()+200) ||
-                        (z.getLane() == p.row-1 && z.getX()== p.getX()+200) ||
-                        (z.getLane() == p.row -1 && z.getX()== p.getX()-200) ||
-                        (z.getLane() == p.row +1 && z.getX()== p.getX()-200)) {
+                if ( (z.getLine() == p.row && z.getX()== p.getX()+200) ||
+                        (z.getLine() == p.row && z.getX()== p.getX()-200) ||
+                        (z.getLine() == p.row+1 && z.getX()== p.getX()) ||
+                        (z.getLine() == p.row-1 && z.getX()== p.getX()) ||
+                        (z.getLine() == p.row+1 && z.getX()== p.getX()+200) ||
+                        (z.getLine() == p.row-1 && z.getX()== p.getX()+200) ||
+                        (z.getLine() == p.row -1 && z.getX()== p.getX()-200) ||
+                        (z.getLine() == p.row +1 && z.getX()== p.getX()-200)) {
                     PlayGroundController.allZombies.remove(z);
                     z.image.setVisible(false);
                     z.image.setDisable(true);

@@ -191,10 +191,9 @@ public class PlayGroundController implements Initializable {
         if(colIndex == null) colIndex = 0;
         if(rowIndex == null) rowIndex = 0;
 
-        // Check if the lane is available
+        // Check if the line is available
         for (Integer i : removedLines) {
             if(rowIndex == i){
-                System.out.println("removed lane");
                 selectedCard = -1;
             }
         }

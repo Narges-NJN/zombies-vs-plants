@@ -10,8 +10,8 @@ import javafx.util.Duration;
 import util.Style;
 
 public class SunFlower extends Plants{
-    private Timeline sunPopper;
-    private Timeline startGlow;
+    public Timeline sunPopper;
+    public Timeline startGlow;
     private Timeline stopGlow;
     public SunFlower(int x, int y, int col, int row) {
         super("/image/GIF/sunflower.gif", x, y, 50, 500, 70, 100, col, row);

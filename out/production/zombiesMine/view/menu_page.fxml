@@ -154,7 +154,7 @@
                   <Font name="Ubuntu Mono" size="56.0" />
                </font>
             </Label>
-            <Label fx:id="high_score_label" alignment="CENTER" layoutX="284.0" layoutY="257.0" text="Label">
+            <Label fx:id="high_score_label" alignment="CENTER" layoutX="343.0" layoutY="257.0">
                <font>
                   <Font name="Ubuntu Mono" size="48.0" />
                </font>

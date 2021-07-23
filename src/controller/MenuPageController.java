@@ -3,6 +3,7 @@ package controller;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.control.*;
@@ -11,11 +12,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import util.FileHandler;
+import util.SoundHandler;
 import util.Style;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class MenuPageController {
+public class MenuPageController implements Initializable {
     public AnchorPane rout_pane;
     public Group start_button;
     public Group recorde_button;
@@ -32,6 +36,8 @@ public class MenuPageController {
     public Label high_score_label;
     boolean isHidden = true;
     public String fxmlPath;
+    public static SoundHandler gameSong;
+
 
     public void playClicked(MouseEvent mouseEvent) throws IOException {
         if(user_name_field.getText() != ""){
@@ -131,5 +137,12 @@ public class MenuPageController {
 
     public void setNormalButtonStyle(MouseEvent mouseEvent) {
         Style.Glow((Node) mouseEvent.getSource(),0);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        SoundHandler sound = new SoundHandler("src/sound/game_music.wav");
+        sound.play();
+        gameSong = sound;
     }
 }

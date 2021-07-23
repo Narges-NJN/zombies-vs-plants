@@ -6,9 +6,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 public class GameComponents {
-    protected String imagePath;
-    protected int x, y, width, height;
-    protected ImageView image;
+    public String imagePath;
+    public int x, y, width, height;
+    public ImageView image;
 
     public GameComponents(String imagePath, int x, int y, int width, int height) {
         this.imagePath=imagePath;

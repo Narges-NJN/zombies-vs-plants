@@ -4,6 +4,8 @@ import controller.PlayGroundController;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;
+import model.plants.Shooter;
+import model.zombies.Zombies;
 
 import java.util.Iterator;
 

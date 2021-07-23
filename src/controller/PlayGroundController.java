@@ -25,6 +25,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import model.*;
+import model.plants.*;
+import model.zombies.FastZombie;
+import model.zombies.NormalZombie;
+import model.zombies.Zombies;
 import util.FileHandler;
 import util.Style;
 

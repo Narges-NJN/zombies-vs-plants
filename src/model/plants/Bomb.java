@@ -1,4 +1,4 @@
-package model;
+package model.plants;
 
 import controller.PlayGroundController;
 import javafx.animation.KeyFrame;
@@ -10,8 +10,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+import model.zombies.Zombies;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Bomb extends Plants{

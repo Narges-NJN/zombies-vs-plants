@@ -1,4 +1,4 @@
-package model;
+package model.plants;
 
 import controller.PlayGroundController;
 import javafx.animation.KeyFrame;
@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+import model.zombies.Zombies;
 
 import java.util.Iterator;
 

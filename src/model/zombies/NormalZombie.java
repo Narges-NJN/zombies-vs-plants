@@ -1,8 +1,9 @@
-package model;
+package model.zombies;
 
 import controller.PlayGroundController;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import model.plants.Plants;
 
 public class NormalZombie extends Zombies{
     public NormalZombie(int x, int y, int lane, GridPane lawn_grid) {

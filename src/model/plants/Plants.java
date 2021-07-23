@@ -1,10 +1,11 @@
-package model;
+package model.plants;
 
 import controller.PlayGroundController;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import model.GameComponents;
 
 public abstract class Plants extends GameComponents {
     protected int price;

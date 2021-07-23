@@ -1,4 +1,4 @@
-package model;
+package model.zombies;
 
 import controller.PlayGroundController;
 import javafx.animation.Animation;
@@ -6,15 +6,18 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
+import model.GameComponents;
+import model.Line;
+import model.plants.Plants;
 
 import java.util.Iterator;
 
-public abstract class Zombies extends GameComponents{
+public abstract class Zombies extends GameComponents {
     public GridPane lawn_grid;
     protected int powerOfAttack;
     protected int energy;
     protected int line;
-    protected int pace = -1;
+    public int pace = -1;
     public Timeline zombieAnimation;
 
     public Zombies(String imagePath, int x, int y, int width, int height, int powerOfAttack, int energy, int line, GridPane lawn_grid) {

@@ -1,6 +1,7 @@
-package model;
+package model.plants;
 
 import javafx.scene.layout.Pane;
+import model.Pea;
 
 public class AdvancedPeaShooter extends Shooter{
     public AdvancedPeaShooter(int x, int y, int col, int row) {

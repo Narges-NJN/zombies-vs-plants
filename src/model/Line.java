@@ -4,6 +4,8 @@ import controller.PlayGroundController;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import model.plants.Plants;
+import model.zombies.Zombies;
 
 public class Line {
     public static void removeLine(GridPane gridPane, int rowIndex){

@@ -147,6 +147,18 @@
             </Text>
          </children>
       </Group>
-      <AnchorPane fx:id="records_sub_scene" layoutX="1201.0" layoutY="89.0" prefHeight="513.0" prefWidth="688.0" stylesheets="@../css/backgrounds.css" />
+      <AnchorPane fx:id="records_sub_scene" layoutX="1201.0" layoutY="89.0" prefHeight="513.0" prefWidth="688.0" stylesheets="@../css/backgrounds.css">
+         <children>
+            <Label alignment="CENTER" layoutX="78.0" layoutY="107.0" text="Your Highest Score:">
+               <font>
+                  <Font name="Ubuntu Mono" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="high_score_label" alignment="CENTER" layoutX="343.0" layoutY="257.0">
+               <font>
+                  <Font name="Ubuntu Mono" size="48.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

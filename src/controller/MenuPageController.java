@@ -29,6 +29,7 @@ public class MenuPageController {
     public TextField user_name_field;
     public Group login_sub_scene;
     public Text error_text;
+    public Label high_score_label;
     boolean isHidden = true;
     public String fxmlPath;
 
@@ -47,6 +48,7 @@ public class MenuPageController {
             saveUserName();
             login_sub_scene.getChildren().clear();
             moveSubScene(records_sub_scene, play_sub_scene);
+            high_score_label.setText(FileHandler.userDataMap.values().toString().replace("[","").replace("]",""));
         }
         else
             showAlert();

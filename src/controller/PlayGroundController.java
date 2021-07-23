@@ -26,6 +26,7 @@ import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import model.*;
 import util.FileHandler;
+import util.SoundHandler;
 import util.Style;
 import java.io.IOException;
 import java.net.URL;
@@ -82,6 +83,7 @@ public class PlayGroundController implements Initializable {
     }
 
     private void initiateVariables(){
+        SoundHandler.playSound("src/sound/game_music.wav", false);
         static_sun_count = sun_count_label;
         static_score_label = score_label;
         boundXCoordinate = boundLine.getLayoutX();

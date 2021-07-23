@@ -4,6 +4,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import util.SoundHandler;
+
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import java.io.File;
 
 public class Main extends Application {
 
@@ -13,11 +18,9 @@ public class Main extends Application {
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(new Scene(root, 1200, 700));
         primaryStage.show();
-    }
-
-    static void mainCaller() {
-            main(null);
+        SoundHandler.playSound("src/sound/game_music.wav", true);
     }
 
     public static void main(String[] args) { launch(args); }
+
 }

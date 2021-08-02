@@ -40,9 +40,6 @@ public class SoundHandler {
         clip.setFramePosition(0);
         clip.start();
     }
-    public void loop(){
-        clip.loop(Clip.LOOP_CONTINUOUSLY);
-    }
     public void stop(){
         clip.stop();
     }

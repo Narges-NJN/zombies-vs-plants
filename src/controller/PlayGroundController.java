@@ -87,7 +87,6 @@ public class PlayGroundController implements Initializable {
     }
 
     private void initiateVariables() {
-       // SoundHandler.playSound("src/sound/game_music.wav", false);
         MenuPageController.gameSong.stop();
         static_sun_count = sun_count_label;
         static_score_label = score_label;

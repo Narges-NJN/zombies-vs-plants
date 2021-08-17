@@ -1,6 +1,6 @@
 ## zombies-vs-plants
-#### JavaFX Game - Final Term project - Advance programming with Java course
-#### OOP
-#### MVC architecture
-#### template design pattern
-##### make sure to have JDK and JavaFX installed
+In this project, I practiced OOP,MVC arcitecture, and Design Patterns
+
+###### to run the project you will need JDK and JavaFX
+
+![20210817_230946.png](https://github.com/Narges-NJN/zombies-vs-plants/blob/master/ScreenShots/20210817_230946.png)
